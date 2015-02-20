@@ -35,6 +35,3 @@ alias aliases='vim ~/.bash_aliases'
 
 # Update aliases file
 alias reload="source ~/.bash_aliases"
-
-# Cool functions
-# Extracts compressed files

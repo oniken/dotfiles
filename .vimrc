@@ -7,6 +7,10 @@ set backspace=indent,eol,start
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" Maps F1 for keyboard to ESC
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -19,11 +23,13 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 
+set incsearch
+set hlsearch
 " Incsearch
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
+ 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 Plug 'junegunn/seoul256.vim'

@@ -17,7 +17,6 @@ alias x='exit'
 
 # Navigating
 alias ..='cd ..'
-alias home='cd ~'
 
 # Fast project entry
 CURRENT='~'

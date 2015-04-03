@@ -2,14 +2,11 @@
 syntax on
 " Enable file type detection and indenting 
 filetype plugin indent on
+
 " Modify backspace
 set backspace=indent,eol,start
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
-
-" Maps F1 for keyboard to ESC
-map <F1> <Esc>
-imap <F1> <Esc>
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -20,40 +17,30 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
+
+let g:syntastic_python_checkers = ['pyflakes']
 
 set incsearch
 set hlsearch
-" Incsearch
-" map /  <Plug>(incsearch-forward)
-" map ?  <Plug>(incsearch-backward)
-" map g/ <Plug>(incsearch-stay)
- 
+
+" Changes tab to autocomplete to emulate IDE
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
 call plug#begin('~/.vim/plugged')
-" Make sure you use single quotes
-Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/vim-easy-align'
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
 " Using git URL
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+Plug 'https://github.com/junegunn/vim-easy-align'
+Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'https://github.com/scrooloose/syntastic.git'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'go.weekly.2012-03-13', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-
-Plug 'haya14busa/incsearch.vim'
-
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
+Plug 'https://github.com/majutsushi/tagbar.git'
 
 call plug#end()

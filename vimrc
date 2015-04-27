@@ -1,5 +1,6 @@
 " Highlight syntax
 syntax on
+
 " Enable file type detection and indenting 
 filetype plugin indent on
 
@@ -12,14 +13,13 @@ set omnifunc=syntaxcomplete#Complete
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 let g:syntastic_python_checkers = ['pyflakes']
 
+" Highlight searches
 set incsearch
 set hlsearch
 
@@ -33,6 +33,13 @@ function! Tab_Or_Complete()
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+" Map for easier splits
+nnoremap <C-J> <C-W><C-J> 
+nnoremap <C-K> <C-W><C-K> 
+nnoremap <C-L> <C-W><C-L> 
+nnoremap <C-H> <C-W><C-H> 
+
+" Vim Plug
 call plug#begin('~/.vim/plugged')
 " Using git URL
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'

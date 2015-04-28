@@ -3,6 +3,13 @@ syntax on
 
 " Enable file type detection and indenting 
 filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Quicker commands
+nore ; :
+nore , ;
 
 " Modify backspace
 set backspace=indent,eol,start
@@ -18,6 +25,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pyflakes']
+
+" NERDTree config
+map <C-n> :NERDTreeToggle<CR>
 
 " Highlight searches
 set incsearch
@@ -49,5 +59,6 @@ Plug 'https://github.com/scrooloose/syntastic.git'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/majutsushi/tagbar.git'
-
+Plug 'https://github.com/kien/ctrlp.vim.git'
+Plug 'https://github.com/scrooloose/nerdtree.git'
 call plug#end()

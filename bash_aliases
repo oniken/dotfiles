@@ -10,6 +10,7 @@ alias lsdl='ls -dl .*'
 alias h='history | tail'
 alias hg='history | grep'
 alias zap='rm -rf'
+alias pwn='sudo !!'
 
 # One letter quickies:
 alias p='pwd'
@@ -19,14 +20,16 @@ alias x='exit'
 alias ..='cd ..'
 
 # Fast project entry
-CURRENT='~'
-alias work="cd $CURRENT"
-alias Downloads="cd ~/Downloads"
+alias work="cd /Users/oniken/Projects/Rails/Atticus" 
+alias box="cd /Users/oniken/Box\ Sync"
+alias Downloads="cd /Users/oniken/Downloads"
+alias seas="ssh -X lnxsrv01.seas.ucla.edu -l kenta"
+alias tags="ctags -R ."
 
 # Git
-alias commit="git commit -m"
-alias add="git add"
+alias commit="git commit -am"
 alias push="git push"
+alias groot='cd $(git rev-parse --show-toplevel)'
 
 # Vim
 alias v='vim'
@@ -36,4 +39,7 @@ alias vimrc="vim ~/.vimrc"
 alias aliases='vim ~/.bash_aliases'
 
 # Update aliases file
-alias reload="source ~/.bash_aliases"
+alias reload="source /Users/oniken/.bash_aliases"
+
+# Python
+alias py='python'

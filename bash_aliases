@@ -15,6 +15,7 @@ alias pwn='sudo !!'
 # One letter quickies:
 alias p='pwd'
 alias x='exit'
+alias cl='clear'
 
 # Navigating
 alias ..='cd ..'

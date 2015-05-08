@@ -60,5 +60,6 @@ Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/majutsushi/tagbar.git'
 Plug 'https://github.com/kien/ctrlp.vim.git'
+Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 call plug#end()

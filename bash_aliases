@@ -44,3 +44,7 @@ alias reload="source /Users/oniken/.bash_aliases"
 
 # Python
 alias py='python'
+
+# Tmux
+alias tat='tmux a -t'
+alias tkill='tmux kill-session -t'

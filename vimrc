@@ -52,6 +52,7 @@ nnoremap <C-H> <C-W><C-H>
 " Vim Plug
 call plug#begin('~/.vim/plugged')
 " Using git URL
+Plug 'https://github.com/tpope/vim-rails.git'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/tpope/vim-unimpaired.git'

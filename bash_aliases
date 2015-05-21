@@ -21,9 +21,9 @@ alias cl='clear'
 alias ..='cd ..'
 
 # Fast project entry
-alias work="cd /Users/oniken/Projects/Rails/Atticus" 
-alias box="cd /Users/oniken/Box\ Sync"
-alias Downloads="cd /Users/oniken/Downloads"
+alias work="" 
+alias box="cd" 
+alias Downloads="cd" 
 alias seas="ssh -X lnxsrv01.seas.ucla.edu -l kenta"
 alias tags="ctags -R ."
 
@@ -40,7 +40,7 @@ alias vimrc="vim ~/.vimrc"
 alias aliases='vim ~/.bash_aliases'
 
 # Update aliases file
-alias reload="source /Users/oniken/.bash_aliases"
+alias reload="source"
 
 # Python
 alias py='python'

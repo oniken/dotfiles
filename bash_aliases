@@ -15,16 +15,12 @@ alias pwn='sudo !!'
 # One letter quickies:
 alias p='pwd'
 alias x='exit'
-alias cl='clear'
 
 # Navigating
 alias ..='cd ..'
 
 # Fast project entry
-alias work="" 
-alias box="cd" 
-alias Downloads="cd" 
-alias seas="ssh -X lnxsrv01.seas.ucla.edu -l kenta"
+alias work="cd " 
 alias tags="ctags -R ."
 
 # Git
@@ -40,11 +36,11 @@ alias vimrc="vim ~/.vimrc"
 alias aliases='vim ~/.bash_aliases'
 
 # Update aliases file
-alias reload="source"
+alias reload="source ~/.bash_aliases"
 
 # Python
 alias py='python'
-
 # Tmux
 alias tat='tmux a -t'
 alias tkill='tmux kill-session -t'
+alias cl='clear'

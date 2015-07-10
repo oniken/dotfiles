@@ -10,11 +10,6 @@ alias lsdl='ls -dl .*'
 alias h='history | tail'
 alias hg='history | grep'
 alias zap='rm -rf'
-alias pwn='sudo !!'
-
-# One letter quickies:
-alias p='pwd'
-alias x='exit'
 
 # Navigating
 alias ..='cd ..'
@@ -29,7 +24,6 @@ alias push="git push"
 alias groot='cd $(git rev-parse --show-toplevel)'
 
 # Vim
-alias v='vim'
 alias vimrc="vim ~/.vimrc"
 
 # Opening files
@@ -44,3 +38,5 @@ alias py='python'
 alias tat='tmux a -t'
 alias tkill='tmux kill-session -t'
 alias cl='clear'
+alias tnew='tmux new -s'
+alias tls='tmux ls'

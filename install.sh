@@ -2,5 +2,5 @@
 
 for entry in $(ls config)
 do
-    cp -v "$entry" "~/.$entry"
+    cp -v "config/$entry" "~/.$entry"
 done

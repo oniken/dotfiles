@@ -13,6 +13,7 @@ alias zap='rm -rf'
 
 # Navigating
 alias ..='cd ..'
+alias cdir='pwd | pbcopy'
 
 # Fast project entry
 alias work="cd " 
